@@ -1,0 +1,7 @@
+[target.mips64el-unknown-linux-gnuabi64]
+linker = "mips64el-unknown-linux-gnuabi64-gcc"
+
+[target.mips64el-unknown-linux-muslabi64]
+linker = "mips64el-unknown-linux-muslabi64-gcc"
+RUSTFLAGS=["-L", "/root/host/mips-deps"]
+#X-compile for the stupid stupid loongson
