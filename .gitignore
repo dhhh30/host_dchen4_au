@@ -7,7 +7,7 @@ target/*
 target/mips64el-unknown-linux-gnuabi64/debug/*
 target/mips64el-unknown-linux-gnuabi64/release/*
 !target/mips64el-unknown-linux-gnuabi64/release/host
-!target/mips64el-unknown-linux-gnuabi64/release/host
+!target/mips64el-unknown-linux-gnuabi64/debug/host
 
 
 
