@@ -13,4 +13,5 @@ env_logger = "0.10.0"
 diesel = { version = "2.1.0", features = ["sqlite", "r2d2"] }
 dotenvy = "0.15"
 serde = { version = "1.0", features = ["derive"] }
+actix-multipart = "0.6.1"
 #git token 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
