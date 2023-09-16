@@ -1,5 +1,5 @@
 use actix_web::middleware::Logger;
-use actix_web::{get, web, App, HttpResponse, HttpServer, Responder, HttpResponseBuilder};
+use actix_web::{get, web, App, HttpResponse, HttpServer, Responder};
 use diesel::r2d2::ConnectionManager;
 use diesel::r2d2::Pool;
 use diesel::sqlite::SqliteConnection;

@@ -2,6 +2,8 @@ use askama::Template;
 //template struct for index
 #[derive(Template)]
 #[template(path="index.html")]
+
+//Struct for index
 struct IndexTemplate<'a> {
     name :&'a str,
 }
