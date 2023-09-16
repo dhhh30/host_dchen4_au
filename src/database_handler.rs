@@ -4,7 +4,7 @@ use diesel::prelude::*;
 // use std::env;
 use diesel::r2d2::ConnectionManager;
 use diesel::r2d2::Pool;
-
+use log::*;
 
 
 //Acquire connection pool for sqlite to avoid errors
@@ -13,6 +13,7 @@ pub fn acquire_connection_pool() -> Pool<ConnectionManager<SqliteConnection>> {
     //could change this to env config but stringy for now
     let url = "database.db";
     let manager = ConnectionManager::<SqliteConnection>::new(url);
+    debug!("acquiring connnection pool to primary database, url {}", url);
     Pool::builder()
     .test_on_check_out(true)
     .build(manager)
@@ -23,6 +24,7 @@ pub fn acquire_connection_pool() -> Pool<ConnectionManager<SqliteConnection>> {
 //for authentication tokening purposes
 pub fn acquire_authentication_pool() -> Pool<ConnectionManager<SqliteConnection>> {
     let manager = ConnectionManager::<SqliteConnection>::new(":memory:");
+    debug!("acquiring connection pool to in memory database");
     Pool::builder()
     .test_on_check_out(true)
     .build(manager)

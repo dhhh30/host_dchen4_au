@@ -1,5 +1,4 @@
 use askama::Template;
-
 //template struct for index
 #[derive(Template)]
 #[template(path="index.html")]
